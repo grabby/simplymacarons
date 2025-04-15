@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order | Simply Macarons</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Macarons | Simply Macarons</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <style>
@@ -13,173 +13,174 @@
 
 <body class="bg-green-50 text-[#21486B] font-sans">
 
-<!-- Nav Bar -->
-<nav class="bg-white shadow fixed w-full z-10">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <a href="index.html" class="brand-font text-xl">Simply Macarons</a>
-    <div class="space-x-4 text-sm">
-      <a href="order.html" class="hover:text-pink-600">Order Now</a>
-      <a href="index.html#flavours" class="hover:text-pink-600">Flavours</a>
-      <a href="index.html#gallery" class="hover:text-pink-600">Gallery</a>
-      <a href="index.html#about" class="hover:text-pink-600">About</a>
-      <a href="index.html#contact" class="hover:text-pink-600">Contact</a>
+<nav class="bg-white shadow fixed w-full z-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="assets/images/simply-macarons-logo-small-white-bg.png" alt="Simply Macarons Logo" class="h-10 w-auto" />
+            <span class="brand-font text-xl">Simply Macarons</span></a>
+      <button id="menu-btn" class="sm:hidden text-2xl focus:outline-none">☰</button>
+      <div id="menu" class="hidden sm:flex space-x-6 text-sm">
+        <a href="order.html" class="hover:text-pink-600">Order Now</a>
+        <a href="index.html#flavours" class="hover:text-pink-600">Flavours</a>
+        <a href="index.html#gallery" class="hover:text-pink-600">Gallery</a>
+        <a href="index.html#about" class="hover:text-pink-600">About</a>
+        <a href="index.html#contact" class="hover:text-pink-600">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="sm:hidden hidden flex-col space-y-3 pb-4 text-sm">
+      <a href="order.html" class="hover:text-pink-600 block">Order Now</a>
+      <a href="index.html#flavours" class="hover:text-pink-600 block">Flavours</a>
+      <a href="index.html#gallery" class="hover:text-pink-600 block">Gallery</a>
+      <a href="index.html#about" class="hover:text-pink-600 block">About</a>
+      <a href="index.html#contact" class="hover:text-pink-600 block">Contact</a>
     </div>
   </div>
 </nav>
 
-<main class="pt-24 px-4 max-w-6xl mx-auto">
+<main class="pt-24 px-4">
+  <section class="text-center mb-10">
+    <h1 class="text-4xl font-semibold mb-2">Build Your Order</h1>
+    <p class="text-lg">Pick your favourite flavours and quantities below.</p>
+  </section>
 
-<section class="text-center py-16">
-  <h1 class="text-3xl font-semibold mb-6">Order Your Macarons</h1>
-  <p class="text-lg mb-8">Build your custom order below — Pick Up Only in Victoria, BC.</p>
+  <section id="flavour-builder" class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></section>
 
-  <div id="flavour-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left mb-10">
-    <!-- Flavours will load here via JS -->
-  </div>
+  <section id="order-summary" class="mt-16 max-w-xl mx-auto bg-white rounded shadow p-6">
+    <h2 class="text-2xl font-semibold mb-4">Order Summary</h2>
+    <ul id="summary-list" class="mb-4 space-y-2"></ul>
+    <p class="text-lg font-semibold">Estimated Total: <span id="total-price">$0.00</span></p>
+    <p id="min-order-warning" class="text-red-600 font-semibold text-center mt-4 hidden"></p>
+  </section>
 
-<!-- Warning message above order summary -->
-<p id="min-order-warning" class="text-red-600 font-semibold text-center mb-4 hidden"></p>
+  <section class="mt-10 max-w-xl mx-auto">
+    <form action="https://formspree.io/f/xblgbezo" method="POST" class="space-y-4">
+      <input type="hidden" name="_redirect" value="https://simplymacarons.ca/thank-you.html" />
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
+      <textarea name="message" placeholder="Order Details..." id="order-message" required class="w-full p-3 border rounded h-32"></textarea>
+      <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition w-full">
+        Send Order Request
+      </button>
+    </form>
+  </section>
 
-  <div id="order-summary" class="max-w-xl mx-auto text-left bg-white border p-4 rounded shadow mb-8">
-    <h2 class="text-xl font-semibold mb-4">Order Summary</h2>
-    <ul id="summary-list" class="mb-4"></ul>
-    <p class="font-bold">Estimated Total: $<span id="total-price">0.00</span></p>
-  </div>
-
-  <form action="https://formspree.io/f/xblgbezo" method="POST" class="max-w-xl mx-auto text-left space-y-4">
-    <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
-    <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
-    <textarea name="message" placeholder="Order Details..." id="order-message" required class="w-full p-3 border rounded h-32"></textarea>
-    <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition w-full">
-      Send Order Request
-    </button>
-  </form>
-
-</section>
-
+  <footer class="mt-16 py-8 text-center text-sm text-gray-600">
+    Made with love in Canada 🇨🇦
+  </footer>
 </main>
 
-<footer class="text-center py-6 text-sm text-gray-600 flex flex-col items-center">
-  <span>© Simply Macarons 2025 — Handcrafted with ♥︎ in Canada 🇨🇦</span>
-</footer>
-
 <script>
-const flavours = [
-  { name: "Cotton Candy", desc: "Sweet & nostalgic." },
-  { name: "Bubble Gum", desc: "Classic bubblegum fun." },
-  { name: "Fuzzy Peach", desc: "Juicy and tangy peach." },
-  { name: "Watermelon", desc: "Fresh summer vibes." },
-  { name: "Lavender", desc: "Delicate floral sweetness." },
-  { name: "Earl Grey", desc: "Bergamot tea with vanilla." },
-  { name: "Lemon", desc: "Bright & citrusy." },
-  { name: "Guava", desc: "Tropical and sweet." },
-  { name: "Vanilla", desc: "Simple & elegant." },
-  { name: "Cola", desc: "Like a fizzy cola candy." },
-  { name: "Chocolate", desc: "Rich cocoa goodness." },
-  { name: "Salted Caramel", desc: "Sweet with sea salt." },
-  { name: "Cherry", desc: "Bold & fruity." },
-  { name: "Banana", desc: "Smooth and sweet." },
-  { name: "Apple", desc: "Crisp green apple." },
-  { name: "Pistachio", desc: "Nutty & slightly sweet." },
-  { name: "Strawberry", desc: "Fresh berry flavour." },
-  { name: "Raspberry", desc: "Sweet with a tart pop." },
-  { name: "Mango", desc: "Juicy tropical." },
-  { name: "Coconut", desc: "Creamy & tropical." },
-  { name: "Marshmallow", desc: "Fluffy & playful." },
-  { name: "Cookies & Cream", desc: "Chocolate cookie filling." },
-  { name: "Nutella", desc: "Hazelnut chocolate spread." },
-  { name: "Cashew Caramel", desc: "Caramel with roasted cashew." },
-  { name: "Crème Brûlée", desc: "Custard with caramel crunch." },
-  { name: "Cinnamon", desc: "Warm & spiced." },
-  { name: "Red Velvet", desc: "Cocoa & cream cheese." },
-  { name: "Biscoff", desc: "Spiced cookie butter." }
-];
-
-const flavourList = document.getElementById('flavour-list');
-const summaryList = document.getElementById('summary-list');
-const totalPriceSpan = document.getElementById('total-price');
-const orderMessage = document.getElementById('order-message');
-
-let order = [];
-
-flavours.forEach(flavour => {
-  const card = document.createElement('div');
-  card.className = 'border p-4 rounded shadow';
-  card.innerHTML = `
-    <h3 class="text-xl font-semibold mb-1">${flavour.name}</h3>
-    <p class="mb-2">${flavour.desc}</p>
-    <select class="border p-2 mb-2 w-full" onchange="addToOrder('${flavour.name}', this.value)">
-      <option value="">Add to Order</option>
-      <option value="6">6 - $12</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  `;
-  flavourList.appendChild(card);
-});
-
-function addToOrder(name, qty) {
-  if (!qty) return;
-  const existing = order.find(item => item.name === name);
-  if (existing) {
-    existing.qty = parseInt(qty);
-  } else {
-    order.push({ name, qty: parseInt(qty) });
+document.addEventListener('DOMContentLoaded', function () {
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
   }
-  updateSummary();
-}
 
-function updateSummary() {
-  summaryList.innerHTML = '';
-  let total = 0;
+  const flavours = [
+    { name: "Cotton Candy", desc: "Sweet & nostalgic." },
+    { name: "Bubble Gum", desc: "Classic bubblegum fun." },
+    { name: "Fuzzy Peach", desc: "Juicy and tangy peach." },
+    { name: "Watermelon", desc: "Fresh summer vibes." },
+    { name: "Lavender", desc: "Delicate floral sweetness." },
+    { name: "Earl Grey", desc: "Bergamot tea with vanilla." },
+    { name: "Lemon", desc: "Bright & citrusy." },
+    { name: "Guava", desc: "Tropical and sweet." },
+    { name: "Vanilla", desc: "Simple & elegant." },
+    { name: "Cola", desc: "Like a fizzy cola candy." },
+    { name: "Chocolate", desc: "Rich cocoa goodness." },
+    { name: "Salted Caramel", desc: "Sweet with sea salt." },
+    { name: "Cherry", desc: "Bold & fruity." },
+    { name: "Banana", desc: "Smooth and sweet." },
+    { name: "Apple", desc: "Crisp green apple." },
+    { name: "Pistachio", desc: "Nutty & slightly sweet." },
+    { name: "Strawberry", desc: "Fresh berry flavour." },
+    { name: "Raspberry", desc: "Sweet with a tart pop." },
+    { name: "Mango", desc: "Juicy tropical." },
+    { name: "Coconut", desc: "Creamy & tropical." },
+    { name: "Marshmallow", desc: "Fluffy & playful." },
+    { name: "Cookies & Cream", desc: "Chocolate cookie filling." },
+    { name: "Nutella", desc: "Hazelnut chocolate spread." },
+    { name: "Cashew Caramel", desc: "Caramel with roasted cashew." },
+    { name: "Crème Brûlée", desc: "Custard with caramel crunch." },
+    { name: "Cinnamon", desc: "Warm & spiced." },
+    { name: "Red Velvet", desc: "Cocoa & cream cheese." },
+    { name: "Biscoff", desc: "Spiced cookie butter." }
+  ];
 
-  order.forEach(item => {
-    const itemTotal = item.qty * 2;
-    total += itemTotal;
-    const li = document.createElement('li');
-    li.textContent = `${item.qty} x ${item.name} ($${itemTotal})`;
-    summaryList.appendChild(li);
+  const flavourList = document.getElementById('flavour-builder');
+  const summaryList = document.getElementById('summary-list');
+  const totalPriceSpan = document.getElementById('total-price');
+  const orderMessage = document.getElementById('order-message');
+  const warning = document.getElementById('min-order-warning');
+
+  let order = [];
+
+  flavours.forEach(flavour => {
+    const card = document.createElement('div');
+    card.className = 'border p-4 rounded shadow';
+    card.innerHTML = `
+      <h3 class="text-xl font-semibold mb-1">${flavour.name}</h3>
+      <p class="mb-2">${flavour.desc}</p>
+      <select class="border p-2 mb-2 w-full" onchange="addToOrder('${flavour.name}', this.value)">
+        <option value="">Add to Order</option>
+        <option value="12">12 - $24</option>
+        <option value="18">18 - $36</option>
+        <option value="24">24 - $48</option>
+        <option value="30">30 - $60</option>
+        <option value="40">40 - $80</option>
+      </select>
+    `;
+    flavourList.appendChild(card);
   });
 
-  const totalQty = order.reduce((sum, item) => sum + item.qty, 0);
-  const flavourCount = order.length;
-  const minRequiredQty = flavourCount >= 2 ? flavourCount * 12 : 6;
+  window.addToOrder = function(name, qty) {
+    if (!qty) return;
+    const existing = order.find(item => item.name === name);
+    if (existing) {
+      existing.qty = parseInt(qty);
+    } else {
+      order.push({ name, qty: parseInt(qty) });
+    }
+    updateSummary();
+  };
 
-  if (totalQty >= 50) {
-    total = totalQty * 1.8;  // Bulk discount
+  function updateSummary() {
+    summaryList.innerHTML = '';
+    let total = 0;
+
+    order.forEach(item => {
+      const itemTotal = item.qty * 2;
+      total += itemTotal;
+      const li = document.createElement('li');
+      li.textContent = `${item.qty} x ${item.name} ($${itemTotal})`;
+      summaryList.appendChild(li);
+    });
+
+    const totalQty = order.reduce((sum, item) => sum + item.qty, 0);
+    const invalid = order.find(item => item.qty < 12);
+    if (totalQty >= 50) total = totalQty * 1.8;
+
+    totalPriceSpan.textContent = `$${total.toFixed(2)}`;
+    orderMessage.value = order.map(item => `${item.qty} x ${item.name}`).join(', ') + ` | Total: $${total.toFixed(2)}`;
+
+    const submitBtn = document.querySelector('form button[type="submit"]');
+    if (invalid) {
+      warning.textContent = `Each flavour must have at least 12 macarons.`;
+      warning.classList.remove('hidden');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+    } else {
+      warning.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+    }
   }
-
-  totalPriceSpan.textContent = total.toFixed(2);
-  document.getElementById('order-count').textContent = totalQty;
-  document.getElementById('order-total').textContent = total.toFixed(2);
-
-  orderMessage.value = order.map(item => `${item.qty} x ${item.name}`).join(', ') + ` | Total: $${total.toFixed(2)}`;
-
-  const warning = document.getElementById('min-order-warning');
-  const submitBtn = document.querySelector('form button[type="submit"]');
-
-  if (totalQty < minRequiredQty) {
-    warning.textContent = `You've selected ${flavourCount} flavour(s). Minimum order is ${minRequiredQty} macarons.`;
-    warning.classList.remove('hidden');
-    submitBtn.disabled = true;
-    submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
-  } else {
-    warning.classList.add('hidden');
-    submitBtn.disabled = false;
-    submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-  }
-}
-
-function scrollToSummary() {
-  document.getElementById('order-summary').scrollIntoView({ behavior: 'smooth' });
-}
+});
 </script>
-
-    
-  
 
 </body>
 </html>
