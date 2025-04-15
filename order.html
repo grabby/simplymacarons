@@ -82,6 +82,18 @@
   <footer class="mt-16 py-8 text-center text-sm text-gray-600">
     Made with love in Canada 🇨🇦
   </footer>
+
+<!-- Sticky Order Summary Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-pink-600 text-white text-center p-4 flex justify-between items-center px-6 shadow-lg">
+    <div>
+      <span class="font-semibold">Macarons Selected:</span>
+      <span id="order-count">0</span>
+    </div>
+    <div class="font-semibold">
+      Total: $<span id="order-total">0.00</span>
+    </div>
+  </div>
+  
 </main>
 
 <script>
@@ -163,36 +175,44 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   function updateSummary() {
-    summaryList.innerHTML = '';
-    let total = 0;
+  summaryList.innerHTML = '';
+  let total = 0;
 
-    order.forEach(item => {
-      const itemTotal = item.qty * 2;
-      total += itemTotal;
-      const li = document.createElement('li');
-      li.textContent = `${item.qty} x ${item.name} ($${itemTotal})`;
-      summaryList.appendChild(li);
-    });
+  order.forEach(item => {
+    const itemTotal = item.qty * 2;
+    total += itemTotal;
+    const li = document.createElement('li');
+    li.textContent = `${item.qty} x ${item.name} ($${itemTotal})`;
+    summaryList.appendChild(li);
+  });
 
-    const totalQty = order.reduce((sum, item) => sum + item.qty, 0);
-    const invalid = order.find(item => item.qty < 12);
-    if (totalQty >= 50) total = totalQty * 1.8;
+  const totalQty = order.reduce((sum, item) => sum + item.qty, 0);
+  const invalid = order.find(item => item.qty < 12);
 
-    totalPriceSpan.textContent = `$${total.toFixed(2)}`;
-    orderMessage.value = order.map(item => `${item.qty} x ${item.name}`).join(', ') + ` | Total: $${total.toFixed(2)}`;
+  if (totalQty >= 50) total = totalQty * 1.8;
 
-    const submitBtn = document.querySelector('form button[type="submit"]');
-    if (invalid) {
-      warning.textContent = `Each flavour must have at least 12 macarons.`;
-      warning.classList.remove('hidden');
-      submitBtn.disabled = true;
-      submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
-    } else {
-      warning.classList.add('hidden');
-      submitBtn.disabled = false;
-      submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-    }
+  totalPriceSpan.textContent = `$${total.toFixed(2)}`;
+
+  // This part updates the sticky bar:
+  document.getElementById('order-count').textContent = totalQty;
+  document.getElementById('order-total').textContent = total.toFixed(2);
+
+  orderMessage.value = order.map(item => `${item.qty} x ${item.name}`).join(', ') + ` | Total: $${total.toFixed(2)}`;
+
+  // Handle warning and submit button:
+  const submitBtn = document.querySelector('form button[type="submit"]');
+  if (invalid) {
+    warning.textContent = `Each flavour must have at least 12 macarons.`;
+    warning.classList.remove('hidden');
+    submitBtn.disabled = true;
+    submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+  } else {
+    warning.classList.add('hidden');
+    submitBtn.disabled = false;
+    submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
   }
+  }
+
 });
 </script>
 
