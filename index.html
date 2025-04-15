@@ -6,24 +6,51 @@
   <title>Simply Macarons | Handmade Macarons in Victoria, BC</title>
   <meta name="description" content="Simply Macarons creates artisan, small-batch macarons in Victoria, BC. Perfect for gifts, events, and everyday celebrations. Custom flavours available!" />
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  .brand-font {
+    font-family: 'Pacifico', cursive;
+  }
+</style>
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-green-50 text-[#21486B] font-sans">
 
 <!-- Navbar -->
-<nav class="bg-white shadow fixed w-full z-10">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <span class="font-bold text-xl">Simply Macarons</span>
-    <div class="space-x-4 text-sm">
-      <a href="#order" class="hover:text-pink-600">Order Now</a>
-      <a href="#flavours" class="hover:text-pink-600">Flavours</a>
-      <a href="#gallery" class="hover:text-pink-600">Gallery</a>
-      <a href="#about" class="hover:text-pink-600">About</a>
-      <a href="#contact" class="hover:text-pink-600">Contact</a>
+<nav class="bg-white shadow fixed w-full z-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+
+      <a href="index.html" class="brand-font text-2xl">Simply Macarons</a>
+
+      <!-- Mobile menu button -->
+      <button id="menu-btn" class="sm:hidden text-2xl focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Links (hidden on mobile) -->
+      <div id="menu" class="hidden sm:flex space-x-6 text-sm">
+        <a href="order.html" class="hover:text-pink-600">Order Now</a>
+        <a href="#flavours" class="hover:text-pink-600">Flavours</a>
+        <a href="#gallery" class="hover:text-pink-600">Gallery</a>
+        <a href="#about" class="hover:text-pink-600">About</a>
+        <a href="#contact" class="hover:text-pink-600">Contact</a>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="sm:hidden hidden flex-col space-y-3 pb-4 text-sm">
+      <a href="order.html" class="hover:text-pink-600 block">Order Now</a>
+      <a href="#flavours" class="hover:text-pink-600 block">Flavours</a>
+      <a href="#gallery" class="hover:text-pink-600 block">Gallery</a>
+      <a href="#about" class="hover:text-pink-600 block">About</a>
+      <a href="#contact" class="hover:text-pink-600 block">Contact</a>
     </div>
   </div>
 </nav>
+
 
 <main class="pt-24 px-4 max-w-6xl mx-auto">
 
@@ -37,48 +64,97 @@
 <!-- Order Now Section -->
 <section id="order" class="text-center py-16">
   <h2 class="text-3xl font-semibold mb-6">Order Now</h2>
-  <p class="text-lg mb-4">All orders are for <strong>Pick Up Only</strong>.</p>
-  <ul class="text-left max-w-xl mx-auto space-y-4 text-lg">
-    <li><strong>30 Pack</strong> — A 30-pack assortment of our classic flavours, perfect for parties and events.</li>
-    <li><strong>40 Pack</strong> — A 40-pack variety featuring our seasonal flavours. Pick up only to maintain quality.</li>
-    <li><strong>Custom</strong> — Let us know how many macarons you want to order, and which flavours! (Up to 4 different flavours)</li>
-  </ul>
+  <p class="text-lg mb-4">All orders are for <strong>Pick Up Only</strong>. $2 per macaron.</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
+
+    <div class="border p-4 rounded shadow">
+      <h3 class="text-xl font-semibold mb-2">12 Pack</h3>
+      <p>$24 — Perfect for gifting or sharing.</p>
+    </div>
+
+    <div class="border p-4 rounded shadow">
+      <h3 class="text-xl font-semibold mb-2">18 Pack</h3>
+      <p>$36 — Great for small events or celebrations.</p>
+    </div>
+
+    <div class="border p-4 rounded shadow">
+      <h3 class="text-xl font-semibold mb-2">24 Pack</h3>
+      <p>$48 — A party favourite for every taste.</p>
+    </div>
+
+    <div class="border p-4 rounded shadow">
+      <h3 class="text-xl font-semibold mb-2">30 Pack</h3>
+      <p>$60 — A mix of our classic flavours.</p>
+    </div>
+
+    <div class="border p-4 rounded shadow">
+      <h3 class="text-xl font-semibold mb-2">40 Pack</h3>
+      <p>$80 — Seasonal flavours & customer favourites.</p>
+    </div>
+
+    <!-- 50 Pack with Ribbon -->
+    <div class="relative border p-4 rounded shadow">
+      <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">
+        Most Popular
+      </div>
+      <h3 class="text-xl font-semibold mb-2">50 Pack</h3>
+      <p>$90 — Our best value! Perfect for events & large gatherings.</p>
+    </div>
+
+    <div class="border p-4 rounded shadow col-span-full">
+      <h3 class="text-xl font-semibold mb-2">Custom Order</h3>
+      <p>Discounts available for orders of 50+ macarons ($1.80 each). Mix and match flavours. Let's chat!</p>
+    </div>
+
+  </div>
+
+  <div class="mt-10">
+    <a href="order.html" class="inline-block bg-pink-600 text-white text-lg font-semibold px-8 py-4 rounded hover:bg-pink-700 transition">
+      Start Your Order →
+    </a>
+  </div>
 </section>
+
 
 <!-- Flavours Section -->
 <section id="flavours" class="text-center py-16">
   <h2 class="text-3xl font-semibold mb-6">Flavours</h2>
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-lg max-w-3xl mx-auto">
-    <span>Cotton Candy</span>
-    <span>Bubble Gum</span>
-    <span>Fuzzy Peach</span>
-    <span>Watermelon</span>
-    <span>Lavender</span>
-    <span>Earl Grey</span>
-    <span>Lemon</span>
-    <span>Guava</span>
-    <span>Vanilla</span>
-    <span>Cola</span>
-    <span>Chocolate</span>
-    <span>Salted Caramel</span>
-    <span>Cherry</span>
-    <span>Banana</span>
-    <span>Apple</span>
-    <span>Pistachio</span>
-    <span>Strawberry</span>
-    <span>Raspberry</span>
-    <span>Mango</span>
-    <span>Coconut</span>
-    <span>Marshmallow</span>
-    <span>Cookies & Cream</span>
-    <span>Nutella</span>
-    <span>Cashew Caramel</span>
-    <span>Crème Brûlée</span>
-    <span>Cinnamon</span>
-    <span>Red Velvet</span>
-    <span>Biscoff</span>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-left text-lg">
+
+    <div><strong>Cotton Candy</strong><br>Light, sweet, and nostalgic — like a carnival treat.</div>
+    <div><strong>Bubble Gum</strong><br>Classic bubblegum flavour — playful & fun.</div>
+    <div><strong>Fuzzy Peach</strong><br>Sweet & tangy with a juicy peach twist.</div>
+    <div><strong>Watermelon</strong><br>Fresh, fruity, and a summer favourite.</div>
+    <div><strong>Lavender</strong><br>Delicate floral notes with a subtle sweetness.</div>
+    <div><strong>Earl Grey</strong><br>Bold bergamot with a touch of creamy vanilla.</div>
+    <div><strong>Lemon</strong><br>Bright & zesty — a classic citrus burst.</div>
+    <div><strong>Guava</strong><br>Exotic, tropical, and perfectly sweet.</div>
+    <div><strong>Vanilla</strong><br>Classic, simple, elegant — for purists.</div>
+    <div><strong>Cola</strong><br>Unexpected and fun — like a fizzy cola bottle candy.</div>
+    <div><strong>Chocolate</strong><br>Rich, smooth, decadent cocoa goodness.</div>
+    <div><strong>Salted Caramel</strong><br>Sweet caramel with a hint of sea salt.</div>
+    <div><strong>Cherry</strong><br>Bright and bold — a fruity pop of flavour.</div>
+    <div><strong>Banana</strong><br>Sweet banana flavour, smooth & creamy.</div>
+    <div><strong>Apple</strong><br>Crisp and refreshing like a green apple candy.</div>
+    <div><strong>Pistachio</strong><br>Nutty, slightly sweet — a classic French favourite.</div>
+    <div><strong>Strawberry</strong><br>Fresh, fruity, and always a crowd-pleaser.</div>
+    <div><strong>Raspberry</strong><br>Tart, sweet, and packed with berry flavour.</div>
+    <div><strong>Mango</strong><br>Juicy tropical mango with a hint of citrus.</div>
+    <div><strong>Coconut</strong><br>Sweet, creamy, and tropical vibes all around.</div>
+    <div><strong>Marshmallow</strong><br>Fluffy, sweet, and playful flavour.</div>
+    <div><strong>Cookies & Cream</strong><br>Chocolate cookie crumbs with creamy filling.</div>
+    <div><strong>Nutella</strong><br>Hazelnut chocolate spread in macaron form.</div>
+    <div><strong>Cashew Caramel</strong><br>Sweet caramel paired with roasted cashews.</div>
+    <div><strong>Crème Brûlée</strong><br>Creamy custard with caramelized sugar crunch.</div>
+    <div><strong>Cinnamon</strong><br>Warm, sweet, and comforting spice notes.</div>
+    <div><strong>Red Velvet</strong><br>Cocoa flavour with cream cheese filling vibes.</div>
+    <div><strong>Biscoff</strong><br>Spiced cookie butter magic — fan favourite.</div>
+
   </div>
 </section>
+
 
 
 <!-- Gallery Section -->
@@ -124,14 +200,20 @@
     <a href="https://www.instagram.com/simply_macarons_by_alex" target="_blank" class="flex items-center gap-2 hover:text-pink-600">📸 Instagram</a>
     <a href="https://www.facebook.com/profile.php?id=61560268713262" target="_blank" class="flex items-center gap-2 hover:text-pink-600">📘 Facebook</a>
   </div>
-  <form action="https://formspree.io/f/xblgbezo" method="POST" class="max-w-xl mx-auto text-left space-y-4">
-    <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
-    <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
-    <textarea name="message" placeholder="Your Message" required class="w-full p-3 border rounded h-32"></textarea>
-    <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition">
-      Send Message
-    </button>
-  </form>
+
+  <h3 class="text-2xl font-semibold mt-12 mb-4">Custom Order Inquiry</h3>
+
+<form action="https://formspree.io/f/xblgbezo" method="POST" class="max-w-xl mx-auto text-left space-y-4">
+  <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
+  <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
+  <input type="text" name="quantity" placeholder="How many macarons?" required class="w-full p-3 border rounded" />
+  <input type="text" name="flavours" placeholder="Preferred flavours?" class="w-full p-3 border rounded" />
+  <textarea name="message" placeholder="Any other details or requests?" class="w-full p-3 border rounded h-32"></textarea>
+  <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition">
+    Submit Order Inquiry
+  </button>
+</form>
+
 </section>
 
 </main>
@@ -140,6 +222,19 @@
 <footer class="text-center py-6 text-sm text-gray-600 flex flex-col items-center">
   <span>© Simply Macarons 2025 — Handcrafted with ♥︎ in Canada 🇨🇦</span>
 </footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+  </script>
+  
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
