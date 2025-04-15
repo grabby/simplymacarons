@@ -3,34 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simply Macarons | Handmade Macarons in Victoria, BC</title>
-  <meta name="description" content="Simply Macarons creates artisan, small-batch macarons in Victoria, BC. Perfect for gifts, events, and everyday celebrations. Custom flavours available!" />
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<style>
-  .brand-font {
-    font-family: 'Pacifico', cursive;
-  }
-</style>
-
+  <title>Simply Macarons | Victoria, BC</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- SEO Meta Tags -->
+<title>Simply Macarons | Handcrafted Macarons in Victoria, BC</title>
+<meta name="description" content="Simply Macarons specializes in handmade, small-batch macarons in Victoria, BC. Custom orders, seasonal flavours, and local pick-up available.">
+
+<!-- Open Graph Meta Tags for Social Sharing -->
+<meta property="og:title" content="Simply Macarons | Handcrafted in Victoria, BC">
+<meta property="og:description" content="Delicious handmade macarons for every occasion. Explore our flavours and order today!">
+<meta property="og:image" content="https://simplymacarons.ca/assets/images/simply-macarons-colourful.jpg">
+<meta property="og:url" content="https://simplymacarons.ca/">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <style>
+    .brand-font { font-family: 'Pacifico', cursive; }
+  </style>
 </head>
 
 <body class="bg-green-50 text-[#21486B] font-sans">
 
-<!-- Navbar -->
 <nav class="bg-white shadow fixed w-full z-50">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-between items-center py-4">
-
-      <a href="index.html" class="brand-font text-2xl">Simply Macarons</a>
-
-      <!-- Mobile menu button -->
-      <button id="menu-btn" class="sm:hidden text-2xl focus:outline-none">
-        ☰
-      </button>
-
-      <!-- Links (hidden on mobile) -->
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="assets/images/simply-macarons-logo-small-white-bg.png" alt="Simply Macarons Logo" class="h-10 w-auto" />
+            <span class="brand-font text-xl">Simply Macarons</span></a>
+      <button id="menu-btn" class="sm:hidden text-2xl focus:outline-none">☰</button>
       <div id="menu" class="hidden sm:flex space-x-6 text-sm">
         <a href="order.html" class="hover:text-pink-600">Order Now</a>
         <a href="#flavours" class="hover:text-pink-600">Flavours</a>
@@ -39,8 +43,6 @@
         <a href="#contact" class="hover:text-pink-600">Contact</a>
       </div>
     </div>
-
-    <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="sm:hidden hidden flex-col space-y-3 pb-4 text-sm">
       <a href="order.html" class="hover:text-pink-600 block">Order Now</a>
       <a href="#flavours" class="hover:text-pink-600 block">Flavours</a>
@@ -51,195 +53,180 @@
   </div>
 </nav>
 
+<main class="pt-20">
 
-<main class="pt-24 px-4 max-w-6xl mx-auto">
+    <section class="bg-pink-100 text-center py-20 px-6">
+        <h1 class="brand-font text-4xl sm:text-5xl mb-4 text-pink-700">Simply Macarons</h1>
+        <p class="text-lg sm:text-xl mb-6 text-[#21486B]">Handcrafted Delights in Victoria, BC</p>
+        <a href="order.html" class="inline-block bg-pink-600 text-white text-lg font-semibold px-8 py-4 rounded hover:bg-pink-700 transition">
+          Start Your Order →
+        </a>
+      </section>
+      
 
-<!-- Home Section -->
-<section class="relative h-[60vh] sm:h-[75vh] bg-cover bg-center" style="background-image: url('assets/images/simply-macarons-colourful.jpg');">
-  <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center text-white px-4">
-    <h1 class="brand-font text-4xl sm:text-5xl mb-4">Simply Macarons</h1>
-    <p class="text-lg sm:text-xl mb-6">Handcrafted Delights in Victoria, BC</p>
-    <a href="order.html" class="inline-block bg-pink-600 text-white text-lg font-semibold px-8 py-4 rounded hover:bg-pink-700 transition">
-      Start Your Order →
-    </a>
-  </div>
-</section>
-
-
-<!-- Order Now Section -->
 <section id="order" class="text-center py-16">
-  <h2 class="text-3xl font-semibold mb-6">Order Now</h2>
-  <p class="text-lg mb-4">All orders are for <strong>Pick Up Only</strong>. $2 per macaron.</p>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
-
-    <div class="border p-4 rounded shadow">
-      <h3 class="text-xl font-semibold mb-2">12 Pack</h3>
-      <p>$24 — Perfect for gifting or sharing.</p>
-    </div>
-
-    <div class="border p-4 rounded shadow">
-      <h3 class="text-xl font-semibold mb-2">18 Pack</h3>
-      <p>$36 — Great for small events or celebrations.</p>
-    </div>
-
-    <div class="border p-4 rounded shadow">
-      <h3 class="text-xl font-semibold mb-2">24 Pack</h3>
-      <p>$48 — A party favourite for every taste.</p>
-    </div>
-
-    <div class="border p-4 rounded shadow">
-      <h3 class="text-xl font-semibold mb-2">30 Pack</h3>
-      <p>$60 — A mix of our classic flavours.</p>
-    </div>
-
-    <div class="border p-4 rounded shadow">
-      <h3 class="text-xl font-semibold mb-2">40 Pack</h3>
-      <p>$80 — Seasonal flavours & customer favourites.</p>
-    </div>
-
-    <!-- 50 Pack with Ribbon -->
-    <div class="relative border p-4 rounded shadow">
-      <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">
-        Most Popular
+    <h2 class="text-3xl font-semibold mb-6">Order Now</h2>
+    <p class="text-lg mb-4">All orders are for <strong>Pick Up Only</strong>. $2 per macaron.</p>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
+  
+      <div class="border p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">12 Pack</h3>
+        <p>$24 — Perfect for gifting or sharing.</p>
       </div>
-      <h3 class="text-xl font-semibold mb-2">50 Pack</h3>
-      <p>$90 — Our best value! Perfect for events & large gatherings.</p>
+  
+      <div class="border p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">18 Pack</h3>
+        <p>$36 — Great for small events or celebrations.</p>
+      </div>
+  
+      <div class="border p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">24 Pack</h3>
+        <p>$48 — A party favourite for every taste.</p>
+      </div>
+  
+      <div class="border p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">30 Pack</h3>
+        <p>$60 — A mix of our classic flavours.</p>
+      </div>
+  
+      <div class="border p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">40 Pack</h3>
+        <p>$80 — Seasonal flavours & customer favourites.</p>
+      </div>
+  
+      <div class="relative border p-4 rounded shadow">
+        <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">
+          Most Popular
+        </div>
+        <h3 class="text-xl font-semibold mb-2">50 Pack</h3>
+        <p>$90 — Our best value! Perfect for events & large gatherings.</p>
+      </div>
+  
+      <div class="border p-4 rounded shadow col-span-full">
+        <h3 class="text-xl font-semibold mb-2">Custom Order</h3>
+        <p>Discounts available for orders of 50+ macarons ($1.80 each). Mix and match flavours. Let's chat!</p>
+      </div>
+  
     </div>
-
-    <div class="border p-4 rounded shadow col-span-full">
-      <h3 class="text-xl font-semibold mb-2">Custom Order</h3>
-      <p>Discounts available for orders of 50+ macarons ($1.80 each). Mix and match flavours. Let's chat!</p>
+  
+    <div class="mt-10">
+      <a href="order.html" class="inline-block bg-pink-600 text-white text-lg font-semibold px-8 py-4 rounded hover:bg-pink-700 transition">
+        Start Your Order →
+      </a>
     </div>
+  </section>
+  
+  <section id="flavours" class="text-center py-16">
+    <h2 class="text-3xl font-semibold mb-6">Flavours</h2>
+    <p class="text-lg mb-10">A selection of our customer favourites and seasonal creations.</p>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
+  
+      <div><h3 class="font-semibold">Cotton Candy</h3><p>Sweet & nostalgic.</p></div>
+      <div><h3 class="font-semibold">Bubble Gum</h3><p>Classic bubblegum fun.</p></div>
+      <div><h3 class="font-semibold">Fuzzy Peach</h3><p>Juicy and tangy peach.</p></div>
+      <div><h3 class="font-semibold">Watermelon</h3><p>Fresh summer vibes.</p></div>
+      <div><h3 class="font-semibold">Lavender</h3><p>Delicate floral sweetness.</p></div>
+      <div><h3 class="font-semibold">Earl Grey</h3><p>Bergamot tea with vanilla.</p></div>
+      <div><h3 class="font-semibold">Lemon</h3><p>Bright & citrusy.</p></div>
+      <div><h3 class="font-semibold">Guava</h3><p>Tropical and sweet.</p></div>
+      <div><h3 class="font-semibold">Vanilla</h3><p>Simple & elegant.</p></div>
+      <div><h3 class="font-semibold">Cola</h3><p>Like a fizzy cola candy.</p></div>
+      <div><h3 class="font-semibold">Chocolate</h3><p>Rich cocoa goodness.</p></div>
+      <div><h3 class="font-semibold">Salted Caramel</h3><p>Sweet with sea salt.</p></div>
+      <div><h3 class="font-semibold">Cherry</h3><p>Bold & fruity.</p></div>
+      <div><h3 class="font-semibold">Banana</h3><p>Smooth and sweet.</p></div>
+      <div><h3 class="font-semibold">Apple</h3><p>Crisp green apple.</p></div>
+      <div><h3 class="font-semibold">Pistachio</h3><p>Nutty & slightly sweet.</p></div>
+      <div><h3 class="font-semibold">Strawberry</h3><p>Fresh berry flavour.</p></div>
+      <div><h3 class="font-semibold">Raspberry</h3><p>Sweet with a tart pop.</p></div>
+      <div><h3 class="font-semibold">Mango</h3><p>Juicy tropical.</p></div>
+      <div><h3 class="font-semibold">Coconut</h3><p>Creamy & tropical.</p></div>
+      <div><h3 class="font-semibold">Marshmallow</h3><p>Fluffy & playful.</p></div>
+      <div><h3 class="font-semibold">Cookies & Cream</h3><p>Chocolate cookie filling.</p></div>
+      <div><h3 class="font-semibold">Nutella</h3><p>Hazelnut chocolate spread.</p></div>
+      <div><h3 class="font-semibold">Cashew Caramel</h3><p>Caramel with roasted cashew.</p></div>
+      <div><h3 class="font-semibold">Crème Brûlée</h3><p>Custard with caramel crunch.</p></div>
+      <div><h3 class="font-semibold">Cinnamon</h3><p>Warm & spiced.</p></div>
+      <div><h3 class="font-semibold">Red Velvet</h3><p>Cocoa & cream cheese.</p></div>
+      <div><h3 class="font-semibold">Biscoff</h3><p>Spiced cookie butter.</p></div>
+  
+    </div>
+  </section>
+  
+  <section id="gallery" class="text-center py-16">
+    <h2 class="text-3xl font-semibold mb-6">Gallery</h2>
+    <p class="text-lg mb-10">A peek at some of our handcrafted macaron creations.</p>
+  
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+  
+      <img src="assets/images/simply-macarons-pretty-in-pink.jpg" alt="Pretty in Pink" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
+      <img src="assets/images/simply-macarons-fuzzy-peach.jpg" alt="Fuzzy Peach" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
+      <img src="assets/images/simply-macarons-colourful.jpg" alt="Colourful Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
+      <img src="assets/images/simply-macarons-bumble-bees.jpg" alt="Bumble Bees" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
+  
+      <img src="assets/images/simply-macarons-october-wedding.jpg" alt="October Wedding" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
+      <img src="assets/images/simply-macarons-halloween-flavours.jpg" alt="Halloween Flavours" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
+      <img src="assets/images/simply-macarons-double-chocolate.jpg" alt="Double Chocolate" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
+      <img src="assets/images/simply-macarons-lemon-buttercream.jpg" alt="Lemon Buttercream" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
+  
+    </div>
+  </section>
+  
+  <section id="about" class="text-center py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-6">About Simply Macarons</h2>
+      <p class="text-lg leading-relaxed">
+        Simply Macarons is a home-based macaron bakery in Victoria, BC specializing in handmade, small-batch macarons with big flavour and beautiful designs.
+        <br /><br />
+        Founded by Alex, Simply Macarons started with a passion for precision baking and a love of sharing joy through sweet treats. Each macaron is lovingly crafted with high-quality ingredients, vibrant colours, and a perfect balance of texture and flavour.
+        <br /><br />
+        Whether you're planning a party, treating yourself, or looking for the perfect gift — we're here to make your day a little sweeter.
+      </p>
+    </div>
+  </section>
+  
+  <section id="contact" class="text-center py-16">
+    <h2 class="text-3xl font-semibold mb-6">Contact</h2>
+    <p class="text-lg mb-6">We'd love to hear from you! Get in touch or follow us online:</p>
+  
+    <div class="flex justify-center space-x-8 text-3xl text-pink-600 mb-8">
+  
+      <a href="mailto:simplymacaronsyyj@gmail.com" target="_blank" class="hover:text-pink-700" title="Email">
+        📧
+      </a>
+  
+      <a href="https://www.instagram.com/simply_macarons_by_alex" target="_blank" class="hover:text-pink-700" title="Instagram">
+        📸
+      </a>
+  
+      <a href="https://www.facebook.com/profile.php?id=61560268713262" target="_blank" class="hover:text-pink-700" title="Facebook">
+        👍
+      </a>
+  
+    </div>
+  
+    <p class="text-sm text-gray-600">Or message us directly through Instagram or Facebook!</p>
+  
+  </section>
 
-  </div>
-
-  <div class="mt-10">
-    <a href="order.html" class="inline-block bg-pink-600 text-white text-lg font-semibold px-8 py-4 rounded hover:bg-pink-700 transition">
-      Start Your Order →
-    </a>
-  </div>
-</section>
-
-
-<!-- Flavours Section -->
-<section id="flavours" class="text-center py-16">
-  <h2 class="text-3xl font-semibold mb-6">Flavours</h2>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-left text-lg">
-
-    <div><strong>Cotton Candy</strong><br>Light, sweet, and nostalgic — like a carnival treat.</div>
-    <div><strong>Bubble Gum</strong><br>Classic bubblegum flavour — playful & fun.</div>
-    <div><strong>Fuzzy Peach</strong><br>Sweet & tangy with a juicy peach twist.</div>
-    <div><strong>Watermelon</strong><br>Fresh, fruity, and a summer favourite.</div>
-    <div><strong>Lavender</strong><br>Delicate floral notes with a subtle sweetness.</div>
-    <div><strong>Earl Grey</strong><br>Bold bergamot with a touch of creamy vanilla.</div>
-    <div><strong>Lemon</strong><br>Bright & zesty — a classic citrus burst.</div>
-    <div><strong>Guava</strong><br>Exotic, tropical, and perfectly sweet.</div>
-    <div><strong>Vanilla</strong><br>Classic, simple, elegant — for purists.</div>
-    <div><strong>Cola</strong><br>Unexpected and fun — like a fizzy cola bottle candy.</div>
-    <div><strong>Chocolate</strong><br>Rich, smooth, decadent cocoa goodness.</div>
-    <div><strong>Salted Caramel</strong><br>Sweet caramel with a hint of sea salt.</div>
-    <div><strong>Cherry</strong><br>Bright and bold — a fruity pop of flavour.</div>
-    <div><strong>Banana</strong><br>Sweet banana flavour, smooth & creamy.</div>
-    <div><strong>Apple</strong><br>Crisp and refreshing like a green apple candy.</div>
-    <div><strong>Pistachio</strong><br>Nutty, slightly sweet — a classic French favourite.</div>
-    <div><strong>Strawberry</strong><br>Fresh, fruity, and always a crowd-pleaser.</div>
-    <div><strong>Raspberry</strong><br>Tart, sweet, and packed with berry flavour.</div>
-    <div><strong>Mango</strong><br>Juicy tropical mango with a hint of citrus.</div>
-    <div><strong>Coconut</strong><br>Sweet, creamy, and tropical vibes all around.</div>
-    <div><strong>Marshmallow</strong><br>Fluffy, sweet, and playful flavour.</div>
-    <div><strong>Cookies & Cream</strong><br>Chocolate cookie crumbs with creamy filling.</div>
-    <div><strong>Nutella</strong><br>Hazelnut chocolate spread in macaron form.</div>
-    <div><strong>Cashew Caramel</strong><br>Sweet caramel paired with roasted cashews.</div>
-    <div><strong>Crème Brûlée</strong><br>Creamy custard with caramelized sugar crunch.</div>
-    <div><strong>Cinnamon</strong><br>Warm, sweet, and comforting spice notes.</div>
-    <div><strong>Red Velvet</strong><br>Cocoa flavour with cream cheese filling vibes.</div>
-    <div><strong>Biscoff</strong><br>Spiced cookie butter magic — fan favourite.</div>
-
-  </div>
-</section>
-
-
-
-<!-- Gallery Section -->
-<section id="gallery" class="text-center py-16">
-  <h2 class="text-3xl font-semibold mb-6">Gallery</h2>
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-    <img src="assets/images/simply-macarons-black-and-blue.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-yellow-green-blue.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-yellow-green-blue2.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-pink-and-white.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-colourful-macarons.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-bumble-bees.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-bumble-bees2.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-creme-brulee.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-gold-white-green-black.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-peppermint-candycane.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-double-chocolate.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-holday-eggnog.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-halloween-flavours.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-october-wedding.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-lime-green.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-lemon-buttercream.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-pretty-in-pink.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-    <img src="assets/images/simply-macarons-pink-green-chocolate-purple.jpg" alt="Macarons" class="object-cover h-48 w-full rounded shadow" loading="lazy" />
-  </div>
-</section>
-
-
-<!-- About Section -->
-<section id="about" class="text-center py-16">
-  <h2 class="text-3xl font-semibold mb-6">About Us</h2>
-  <p class="text-lg leading-relaxed max-w-3xl mx-auto">
-    Simply Macarons creates moments of joy — one handcrafted macaron at a time. Based in Victoria, BC, we specialize in artisan flavors, small-batch quality, and colourful creations for every occasion.
-  </p>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="text-center py-16">
-  <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
-  <p class="mb-6 text-lg">Send us a message — we’d love to hear from you!</p>
-  <div class="flex justify-center gap-6 mb-6 text-lg items-center">
-    <a href="mailto:simplymacaronsyyj@gmail.com" class="flex items-center gap-2 hover:text-pink-600">📧 Email</a>
-    <a href="https://www.instagram.com/simply_macarons_by_alex" target="_blank" class="flex items-center gap-2 hover:text-pink-600">📸 Instagram</a>
-    <a href="https://www.facebook.com/profile.php?id=61560268713262" target="_blank" class="flex items-center gap-2 hover:text-pink-600">📘 Facebook</a>
-  </div>
-
-  <h3 class="text-2xl font-semibold mt-12 mb-4">Custom Order Inquiry</h3>
-
-<form action="https://formspree.io/f/xblgbezo" method="POST" class="max-w-xl mx-auto text-left space-y-4">
-  <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
-  <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
-  <input type="text" name="quantity" placeholder="How many macarons?" required class="w-full p-3 border rounded" />
-  <input type="text" name="flavours" placeholder="Preferred flavours?" class="w-full p-3 border rounded" />
-  <textarea name="message" placeholder="Any other details or requests?" class="w-full p-3 border rounded h-32"></textarea>
-  <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition">
-    Submit Order Inquiry
-  </button>
-</form>
-
-</section>
-
-</main>
-
-<!-- Footer -->
-<footer class="text-center py-6 text-sm text-gray-600 flex flex-col items-center">
-  <span>© Simply Macarons 2025 — Handcrafted with ♥︎ in Canada 🇨🇦</span>
-</footer>
-
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  }
-  </script>
+  <footer class="bg-white py-6 text-center text-sm text-gray-600">
+    Made with love in Canada 🇨🇦
+  </footer>
   
   <script>
-    document.getElementById('menu-btn').addEventListener('click', function () {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
   </script>
-
-</body>
-</html>
+  
+  </main>
+  
+  </body>
+  </html>
+  
