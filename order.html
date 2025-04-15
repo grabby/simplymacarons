@@ -76,6 +76,12 @@
       <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition w-full">
         Send Order Request
       </button>
+      <p class="text-sm text-gray-600 text-center mt-4">
+        Payment accepted via E-Transfer, Cash, or Credit Card (Square).
+        <br>
+        No payment is required until you pick up your order.
+      </p>
+      
     </form>
   </section>
 
@@ -107,61 +113,56 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const flavours = [
-    { name: "Cotton Candy", desc: "Sweet & nostalgic." },
-    { name: "Bubble Gum", desc: "Classic bubblegum fun." },
-    { name: "Fuzzy Peach", desc: "Juicy and tangy peach." },
-    { name: "Watermelon", desc: "Fresh summer vibes." },
-    { name: "Lavender", desc: "Delicate floral sweetness." },
-    { name: "Earl Grey", desc: "Bergamot tea with vanilla." },
-    { name: "Lemon", desc: "Bright & citrusy." },
-    { name: "Guava", desc: "Tropical and sweet." },
-    { name: "Vanilla", desc: "Simple & elegant." },
-    { name: "Cola", desc: "Like a fizzy cola candy." },
-    { name: "Chocolate", desc: "Rich cocoa goodness." },
-    { name: "Salted Caramel", desc: "Sweet with sea salt." },
-    { name: "Cherry", desc: "Bold & fruity." },
-    { name: "Banana", desc: "Smooth and sweet." },
-    { name: "Apple", desc: "Crisp green apple." },
-    { name: "Pistachio", desc: "Nutty & slightly sweet." },
-    { name: "Strawberry", desc: "Fresh berry flavour." },
-    { name: "Raspberry", desc: "Sweet with a tart pop." },
-    { name: "Mango", desc: "Juicy tropical." },
-    { name: "Coconut", desc: "Creamy & tropical." },
-    { name: "Marshmallow", desc: "Fluffy & playful." },
-    { name: "Cookies & Cream", desc: "Chocolate cookie filling." },
-    { name: "Nutella", desc: "Hazelnut chocolate spread." },
-    { name: "Cashew Caramel", desc: "Caramel with roasted cashew." },
-    { name: "Crème Brûlée", desc: "Custard with caramel crunch." },
-    { name: "Cinnamon", desc: "Warm & spiced." },
-    { name: "Red Velvet", desc: "Cocoa & cream cheese." },
-    { name: "Biscoff", desc: "Spiced cookie butter." }
-  ];
+  { name: "Earl Grey", desc: "Bergamot tea with vanilla.", ribbon: "Top 5" },
+  { name: "Fuzzy Peach", desc: "Juicy and tangy peach.", ribbon: "Kid-Favourite" },
+  { name: "Pistachio", desc: "Nutty & slightly sweet.", ribbon: "Top 5" },
+  { name: "Crème Brûlée", desc: "Custard with caramel crunch.", ribbon: "Top 5" },
+  { name: "Cookies & Cream", desc: "Chocolate cookie filling.", ribbon: "Top 5" },
+  { name: "Red Velvet", desc: "Cocoa & cream cheese.", ribbon: "Top 5" },
+  { name: "Salted Caramel", desc: "Sweet with sea salt." },
+  { name: "Chocolate", desc: "Rich cocoa goodness." },
+  { name: "Vanilla", desc: "Simple & elegant." },
+  { name: "Strawberry", desc: "Fresh berry flavour." },
+  { name: "Raspberry", desc: "Sweet with a tart pop." },
+  { name: "Lemon", desc: "Bright & citrusy." },
+  { name: "Mango", desc: "Juicy tropical." },
+  { name: "Watermelon", desc: "Fresh summer vibes." },
+  { name: "Guava", desc: "Tropical and sweet." },
+  { name: "Cherry", desc: "Bold & fruity." },
+  { name: "Cola", desc: "Like a fizzy cola candy." },
+  { name: "Banana", desc: "Smooth and sweet." },
+  { name: "Apple", desc: "Crisp green apple." },
+  { name: "Lavender", desc: "Delicate floral sweetness." },
+  { name: "Marshmallow", desc: "Fluffy & playful." },
+  { name: "Nutella", desc: "Hazelnut chocolate spread." },
+  { name: "Cashew Caramel", desc: "Caramel with roasted cashew." },
+  { name: "Coconut", desc: "Creamy & tropical." },
+  { name: "Biscoff", desc: "Spiced cookie butter." },
+  { name: "Cinnamon", desc: "Warm & spiced." },
+];
 
-  const flavourList = document.getElementById('flavour-builder');
-  const summaryList = document.getElementById('summary-list');
-  const totalPriceSpan = document.getElementById('total-price');
-  const orderMessage = document.getElementById('order-message');
-  const warning = document.getElementById('min-order-warning');
+const flavourList = document.getElementById('flavour-builder');
 
-  let order = [];
+flavours.forEach(flavour => {
+  const card = document.createElement('div');
+  card.className = 'border p-4 rounded shadow relative';
 
-  flavours.forEach(flavour => {
-    const card = document.createElement('div');
-    card.className = 'border p-4 rounded shadow';
-    card.innerHTML = `
-      <h3 class="text-xl font-semibold mb-1">${flavour.name}</h3>
-      <p class="mb-2">${flavour.desc}</p>
-      <select class="border p-2 mb-2 w-full" onchange="addToOrder('${flavour.name}', this.value)">
-        <option value="">Add to Order</option>
-        <option value="12">12 - $24</option>
-        <option value="18">18 - $36</option>
-        <option value="24">24 - $48</option>
-        <option value="30">30 - $60</option>
-        <option value="40">40 - $80</option>
-      </select>
-    `;
-    flavourList.appendChild(card);
-  });
+  card.innerHTML = `
+    ${flavour.ribbon ? `<div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">${flavour.ribbon}</div>` : ''}
+    <h3 class="text-xl font-semibold mb-1">${flavour.name}</h3>
+    <p class="mb-2">${flavour.desc}</p>
+    <select class="border p-2 mb-2 w-full" onchange="addToOrder('${flavour.name}', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  `;
+
+  flavourList.appendChild(card);
+});
 
   window.addToOrder = function(name, qty) {
     if (!qty) return;
