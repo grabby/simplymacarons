@@ -456,15 +456,25 @@
   </footer>
 
 <!-- Sticky Order Summary Bar -->
-<div class="fixed bottom-0 left-0 right-0 bg-pink-600 text-white text-center p-4 flex justify-between items-center px-6 shadow-lg">
-    <div>
-      <span class="font-semibold">Macarons Selected:</span>
-      <span id="order-count">0</span>
-    </div>
-    <div class="font-semibold">
-      Total: $<span id="order-total">0.00</span>
-    </div>
+<!-- Sticky Order Summary Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-pink-600 text-white flex justify-between items-center px-6 py-3 shadow-lg z-50">
+  <div class="text-sm font-medium">
+    Macarons Selected: <span id="order-count">0</span>
   </div>
+  <button onclick="scrollToForm()" class="flex items-center gap-2 bg-white text-pink-600 font-semibold text-sm px-4 py-2 rounded-full shadow hover:bg-pink-100 transition">
+    🛒 Total: $<span id="order-total">0.00</span>
+  </button>
+</div>
+
+<script>
+function scrollToForm() {
+  const formSection = document.querySelector('form');
+  if (formSection) {
+    formSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+</script>
+
   
 </main>
 
