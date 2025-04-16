@@ -23,6 +23,25 @@
   <style>
     .brand-font { font-family: 'Pacifico', cursive; }
   </style>
+<!-- Receipt -->
+<style>
+  @keyframes receiptPrint {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #summary-list li {
+    animation: receiptPrint 0.3s ease-in-out;
+    animation-fill-mode: both;
+  }
+  </style>
+    
 </head>
 
 <body class="bg-green-50 text-[#21486B] font-sans">
@@ -426,10 +445,13 @@
   </div>
   </section>
 
-  <section id="order-summary" class="mt-16 max-w-xl mx-auto bg-white rounded shadow p-6">
-    <h2 class="text-2xl font-semibold mb-4">Order Summary</h2>
-    <ul id="summary-list" class="mb-4 space-y-2"></ul>
-    <p class="text-lg font-semibold">Estimated Total: <span id="total-price">$0.00</span></p>
+  <section id="order-summary" class="mt-16 max-w-xl mx-auto bg-white border border-gray-300 border-dashed rounded-md p-6 shadow-sm font-mono text-sm">
+    <h2 class="text-xl font-bold mb-4 text-center tracking-widest">ORDER SUMMARY</h2>
+    <ul id="summary-list" class="mb-4 space-y-1 whitespace-pre-wrap"></ul>
+    <div class="flex justify-between font-semibold border-t border-dashed pt-3 mt-4">
+      <span>Total</span>
+      <span id="total-price">$0.00</span>
+    </div>
     <p id="min-order-warning" class="text-red-600 font-semibold text-center mt-4 hidden"></p>
   </section>
 
@@ -455,7 +477,7 @@
     Made with love in Canada 🇨🇦
   </footer>
 
-<!-- Sticky Order Summary Bar -->
+
 <!-- Sticky Order Summary Bar -->
 <div class="fixed bottom-0 left-0 right-0 bg-pink-600 text-white flex justify-between items-center px-6 py-3 shadow-lg z-50">
   <div class="text-sm font-medium">
@@ -516,14 +538,15 @@ function scrollToForm() {
       order.forEach(item => {
         const itemTotal = item.qty * 2;
         total += itemTotal;
-        const li = document.createElement('li');
-        li.textContent = `${item.qty} x ${item.name} ($${itemTotal})`;
-        summaryList.appendChild(li);
+        const line = document.createElement('li');
+        const flavourText = `${item.qty} x ${item.name}`;
+        const lineFormatted = flavourText.padEnd(25, '.') + `$${itemTotal.toFixed(2)}`;
+        line.textContent = lineFormatted;
+        summaryList.appendChild(line);
       });
   
       const totalQty = order.reduce((sum, item) => sum + item.qty, 0);
       const invalid = order.find(item => item.qty < 12);
-  
       if (totalQty >= 50) {
         total = totalQty * 1.8;
       }
@@ -545,6 +568,14 @@ function scrollToForm() {
         submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
       }
     }
+  
+    // Checkout scroll button
+    window.scrollToForm = function() {
+      const formSection = document.querySelector('form');
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
   });
   </script>
   
