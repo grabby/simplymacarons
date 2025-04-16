@@ -58,7 +58,373 @@
     <p class="text-lg">Pick your favourite flavours and quantities below.</p>
   </section>
 
-  <section id="flavour-builder" class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></section>
+  
+<section id="flavour-builder" class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-4">
+
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
+    <div class="text-sm text-pink-700 font-bold mb-1">Earl Grey</div>
+    <p class="text-xs text-gray-600 mb-2">Bergamot tea with vanilla.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Earl Grey', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Kid-Favourite</div>
+    <div class="text-sm text-pink-700 font-bold mb-1">Fuzzy Peach</div>
+    <p class="text-xs text-gray-600 mb-2">Juicy and tangy peach.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Fuzzy Peach', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
+    <div class="text-sm text-pink-700 font-bold mb-1">Pistachio</div>
+    <p class="text-xs text-gray-600 mb-2">Nutty & slightly sweet.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Pistachio', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
+    <div class="text-sm text-pink-700 font-bold mb-1">Crème Brûlée</div>
+    <p class="text-xs text-gray-600 mb-2">Custard with caramel crunch.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Crème Brûlée', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
+    <div class="text-sm text-pink-700 font-bold mb-1">Cookies & Cream</div>
+    <p class="text-xs text-gray-600 mb-2">Chocolate cookie filling.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cookies & Cream', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
+    <div class="text-sm text-pink-700 font-bold mb-1">Red Velvet</div>
+    <p class="text-xs text-gray-600 mb-2">Cocoa & cream cheese.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Red Velvet', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Salted Caramel</div>
+    <p class="text-xs text-gray-600 mb-2">Sweet with sea salt.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Salted Caramel', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Strawberry</div>
+    <p class="text-xs text-gray-600 mb-2">Fresh berry flavour.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Strawberry', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Mango</div>
+    <p class="text-xs text-gray-600 mb-2">Juicy tropical.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Mango', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Vanilla</div>
+    <p class="text-xs text-gray-600 mb-2">Simple & elegant.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Vanilla', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Chocolate</div>
+    <p class="text-xs text-gray-600 mb-2">Rich cocoa goodness.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Chocolate', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Lemon</div>
+    <p class="text-xs text-gray-600 mb-2">Bright & citrusy.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Lemon', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Raspberry</div>
+    <p class="text-xs text-gray-600 mb-2">Sweet with a tart pop.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Raspberry', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Watermelon</div>
+    <p class="text-xs text-gray-600 mb-2">Fresh summer vibes.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Watermelon', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Guava</div>
+    <p class="text-xs text-gray-600 mb-2">Tropical and sweet.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Guava', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Cherry</div>
+    <p class="text-xs text-gray-600 mb-2">Bold & fruity.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cherry', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Cola</div>
+    <p class="text-xs text-gray-600 mb-2">Like a fizzy cola candy.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cola', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Banana</div>
+    <p class="text-xs text-gray-600 mb-2">Smooth and sweet.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Banana', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Apple</div>
+    <p class="text-xs text-gray-600 mb-2">Crisp green apple.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Apple', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Lavender</div>
+    <p class="text-xs text-gray-600 mb-2">Delicate floral sweetness.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Lavender', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Marshmallow</div>
+    <p class="text-xs text-gray-600 mb-2">Fluffy & playful.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Marshmallow', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Nutella</div>
+    <p class="text-xs text-gray-600 mb-2">Hazelnut chocolate spread.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Nutella', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Cashew Caramel</div>
+    <p class="text-xs text-gray-600 mb-2">Caramel with roasted cashew.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cashew Caramel', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Coconut</div>
+    <p class="text-xs text-gray-600 mb-2">Creamy & tropical.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Coconut', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Biscoff</div>
+    <p class="text-xs text-gray-600 mb-2">Spiced cookie butter.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Biscoff', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  
+  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+    
+    <div class="text-sm text-pink-700 font-bold mb-1">Cinnamon</div>
+    <p class="text-xs text-gray-600 mb-2">Warm & spiced.</p>
+    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cinnamon', this.value)">
+      <option value="">Add to Order</option>
+      <option value="12">12 - $24</option>
+      <option value="18">18 - $36</option>
+      <option value="24">24 - $48</option>
+      <option value="30">30 - $60</option>
+      <option value="40">40 - $80</option>
+    </select>
+  </div>
+  </section>
 
   <section id="order-summary" class="mt-16 max-w-xl mx-auto bg-white rounded shadow p-6">
     <h2 class="text-2xl font-semibold mb-4">Order Summary</h2>
@@ -103,119 +469,75 @@
 </main>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
-
-  const flavours = [
-  { name: "Earl Grey", desc: "Bergamot tea with vanilla.", ribbon: "Top 5" },
-  { name: "Fuzzy Peach", desc: "Juicy and tangy peach.", ribbon: "Kid-Favourite" },
-  { name: "Pistachio", desc: "Nutty & slightly sweet.", ribbon: "Top 5" },
-  { name: "Crème Brûlée", desc: "Custard with caramel crunch.", ribbon: "Top 5" },
-  { name: "Cookies & Cream", desc: "Chocolate cookie filling.", ribbon: "Top 5" },
-  { name: "Red Velvet", desc: "Cocoa & cream cheese.", ribbon: "Top 5" },
-  { name: "Salted Caramel", desc: "Sweet with sea salt." },
-  { name: "Chocolate", desc: "Rich cocoa goodness." },
-  { name: "Vanilla", desc: "Simple & elegant." },
-  { name: "Strawberry", desc: "Fresh berry flavour." },
-  { name: "Raspberry", desc: "Sweet with a tart pop." },
-  { name: "Lemon", desc: "Bright & citrusy." },
-  { name: "Mango", desc: "Juicy tropical." },
-  { name: "Watermelon", desc: "Fresh summer vibes." },
-  { name: "Guava", desc: "Tropical and sweet." },
-  { name: "Cherry", desc: "Bold & fruity." },
-  { name: "Cola", desc: "Like a fizzy cola candy." },
-  { name: "Banana", desc: "Smooth and sweet." },
-  { name: "Apple", desc: "Crisp green apple." },
-  { name: "Lavender", desc: "Delicate floral sweetness." },
-  { name: "Marshmallow", desc: "Fluffy & playful." },
-  { name: "Nutella", desc: "Hazelnut chocolate spread." },
-  { name: "Cashew Caramel", desc: "Caramel with roasted cashew." },
-  { name: "Coconut", desc: "Creamy & tropical." },
-  { name: "Biscoff", desc: "Spiced cookie butter." },
-  { name: "Cinnamon", desc: "Warm & spiced." },
-];
-
-const flavourList = document.getElementById('flavour-builder');
-
-flavours.forEach(flavour => {
-  const card = document.createElement('div');
-  card.className = 'border p-4 rounded shadow relative';
-
-  card.innerHTML = `
-    ${flavour.ribbon ? `<div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">${flavour.ribbon}</div>` : ''}
-    <h3 class="text-xl font-semibold mb-1">${flavour.name}</h3>
-    <p class="mb-2">${flavour.desc}</p>
-    <select class="border p-2 mb-2 w-full" onchange="addToOrder('${flavour.name}', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  `;
-
-  flavourList.appendChild(card);
-});
-
-  window.addToOrder = function(name, qty) {
-    if (!qty) return;
-    const existing = order.find(item => item.name === name);
-    if (existing) {
-      existing.qty = parseInt(qty);
-    } else {
-      order.push({ name, qty: parseInt(qty) });
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
     }
-    updateSummary();
-  };
-
-  function updateSummary() {
-  summaryList.innerHTML = '';
-  let total = 0;
-
-  order.forEach(item => {
-    const itemTotal = item.qty * 2;
-    total += itemTotal;
-    const li = document.createElement('li');
-    li.textContent = `${item.qty} x ${item.name} ($${itemTotal})`;
-    summaryList.appendChild(li);
+  
+    const summaryList = document.getElementById('summary-list');
+    const totalPriceSpan = document.getElementById('total-price');
+    const orderMessage = document.getElementById('order-message');
+    const warning = document.getElementById('min-order-warning');
+    const submitBtn = document.querySelector('form button[type="submit"]');
+    const orderCount = document.getElementById('order-count');
+    const orderTotal = document.getElementById('order-total');
+  
+    let order = [];
+  
+    window.addToOrder = function(name, qty) {
+      if (!qty) return;
+      const existing = order.find(item => item.name === name);
+      if (existing) {
+        existing.qty = parseInt(qty);
+      } else {
+        order.push({ name, qty: parseInt(qty) });
+      }
+      updateSummary();
+    };
+  
+    function updateSummary() {
+      summaryList.innerHTML = '';
+      let total = 0;
+  
+      order.forEach(item => {
+        const itemTotal = item.qty * 2;
+        total += itemTotal;
+        const li = document.createElement('li');
+        li.textContent = `${item.qty} x ${item.name} ($${itemTotal})`;
+        summaryList.appendChild(li);
+      });
+  
+      const totalQty = order.reduce((sum, item) => sum + item.qty, 0);
+      const invalid = order.find(item => item.qty < 12);
+  
+      if (totalQty >= 50) {
+        total = totalQty * 1.8;
+      }
+  
+      totalPriceSpan.textContent = `$${total.toFixed(2)}`;
+      orderMessage.value = order.map(item => `${item.qty} x ${item.name}`).join(', ') + ` | Total: $${total.toFixed(2)}`;
+  
+      if (orderCount) orderCount.textContent = totalQty;
+      if (orderTotal) orderTotal.textContent = total.toFixed(2);
+  
+      if (invalid) {
+        warning.textContent = `Each flavour must have at least 12 macarons.`;
+        warning.classList.remove('hidden');
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      } else {
+        warning.classList.add('hidden');
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+    }
   });
-
-  const totalQty = order.reduce((sum, item) => sum + item.qty, 0);
-  const invalid = order.find(item => item.qty < 12);
-
-  if (totalQty >= 50) total = totalQty * 1.8;
-
-  totalPriceSpan.textContent = `$${total.toFixed(2)}`;
-
-  // This part updates the sticky bar:
-  document.getElementById('order-count').textContent = totalQty;
-  document.getElementById('order-total').textContent = total.toFixed(2);
-
-  orderMessage.value = order.map(item => `${item.qty} x ${item.name}`).join(', ') + ` | Total: $${total.toFixed(2)}`;
-
-  // Handle warning and submit button:
-  const submitBtn = document.querySelector('form button[type="submit"]');
-  if (invalid) {
-    warning.textContent = `Each flavour must have at least 12 macarons.`;
-    warning.classList.remove('hidden');
-    submitBtn.disabled = true;
-    submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
-  } else {
-    warning.classList.add('hidden');
-    submitBtn.disabled = false;
-    submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-  }
-  }
-
-});
-</script>
+  </script>
+  
 
 </body>
 </html>
