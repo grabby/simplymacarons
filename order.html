@@ -1,26 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Order Macarons | Simply Macarons</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
- <!-- SEO Meta Tags -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Macarons | Simply Macarons</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet"/>
+<!-- SEO Meta Tags -->
 <title>Order Macarons | Handcrafted Macarons in Victoria, BC</title>
-<meta name="description" content="Simply Macarons specializes in handmade, small-batch macarons in Victoria, BC. Custom orders, seasonal flavours, and local pick-up available.">
-
+<meta content="Simply Macarons specializes in handmade, small-batch macarons in Victoria, BC. Custom orders, seasonal flavours, and local pick-up available." name="description"/>
 <!-- Open Graph Meta Tags for Social Sharing -->
-<meta property="og:title" content="Order Simply Macarons | Handcrafted in Victoria, BC">
-<meta property="og:description" content="Delicious handmade macarons for every occasion. Explore our flavours and order today!">
-<meta property="og:image" content="https://simplymacarons.ca/assets/images/simply-macarons-colourful.jpg">
-<meta property="og:url" content="https://simplymacarons.ca/">
-<meta property="og:type" content="website">
-
+<meta content="Order Simply Macarons | Handcrafted in Victoria, BC" property="og:title"/>
+<meta content="Delicious handmade macarons for every occasion. Explore our flavours and order today!" property="og:description"/>
+<meta content="https://simplymacarons.ca/assets/images/simply-macarons-colourful.jpg" property="og:image"/>
+<meta content="https://simplymacarons.ca/" property="og:url"/>
+<meta content="website" property="og:type"/>
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/images/favicon.png">
- 
-  <style>
+<link href="assets/images/favicon.png" rel="icon" type="image/png"/>
+<style>
     .brand-font { font-family: 'Pacifico', cursive; }
   </style>
 <!-- Receipt -->
@@ -41,453 +39,511 @@
     animation-fill-mode: both;
   }
   </style>
-    
-</head>
-
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script></head>
 <body class="bg-green-50 text-[#21486B] font-sans">
-
 <nav class="bg-white shadow fixed w-full z-50">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex justify-between items-center py-4">
-        <a href="index.html" class="flex items-center space-x-2">
-            <img src="assets/images/simply-macarons-logo-small-white-bg.png" alt="Simply Macarons Logo" class="h-10 w-auto" />
-            <span class="brand-font text-xl">Simply Macarons</span></a>
-      <button id="menu-btn" class="sm:hidden text-2xl focus:outline-none">☰</button>
-      <div id="menu" class="hidden sm:flex space-x-6 text-sm">
-        <a href="order.html" class="hover:text-pink-600">Order Now</a>
-        <a href="index.html#flavours" class="hover:text-pink-600">Flavours</a>
-        <a href="index.html#gallery" class="hover:text-pink-600">Gallery</a>
-        <a href="index.html#about" class="hover:text-pink-600">About</a>
-        <a href="index.html#contact" class="hover:text-pink-600">Contact</a>
-      </div>
-    </div>
-    <div id="mobile-menu" class="sm:hidden hidden flex-col space-y-3 pb-4 text-sm">
-      <a href="order.html" class="hover:text-pink-600 block">Order Now</a>
-      <a href="index.html#flavours" class="hover:text-pink-600 block">Flavours</a>
-      <a href="index.html#gallery" class="hover:text-pink-600 block">Gallery</a>
-      <a href="index.html#about" class="hover:text-pink-600 block">About</a>
-      <a href="index.html#contact" class="hover:text-pink-600 block">Contact</a>
-    </div>
-  </div>
+<div class="max-w-6xl mx-auto px-4">
+<div class="flex justify-between items-center py-4">
+<a class="flex items-center space-x-2" href="index.html">
+<img alt="Simply Macarons Logo" class="h-10 w-auto" src="assets/images/simply-macarons-logo-small-white-bg.png"/>
+<span class="brand-font text-xl">Simply Macarons</span></a>
+<button class="sm:hidden text-2xl focus:outline-none" id="menu-btn">☰</button>
+<div class="hidden sm:flex space-x-6 text-sm" id="menu">
+<a class="hover:text-pink-600" href="order.html">Order Now</a>
+<a class="hover:text-pink-600" href="index.html#flavours">Flavours</a>
+<a class="hover:text-pink-600" href="index.html#gallery">Gallery</a>
+<a class="hover:text-pink-600" href="index.html#about">About</a>
+<a class="hover:text-pink-600" href="index.html#contact">Contact</a>
+</div>
+</div>
+<div class="sm:hidden hidden flex-col space-y-3 pb-4 text-sm" id="mobile-menu">
+<a class="hover:text-pink-600 block" href="order.html">Order Now</a>
+<a class="hover:text-pink-600 block" href="index.html#flavours">Flavours</a>
+<a class="hover:text-pink-600 block" href="index.html#gallery">Gallery</a>
+<a class="hover:text-pink-600 block" href="index.html#about">About</a>
+<a class="hover:text-pink-600 block" href="index.html#contact">Contact</a>
+</div>
+</div>
 </nav>
-
 <main class="pt-24 px-4">
-  <section class="text-center mb-10">
-    <h1 class="text-4xl font-semibold mb-2">Build Your Order</h1>
-    <p class="text-lg">Pick your favourite flavours and quantities below.</p>
-  </section>
-
-  
-<section id="flavour-builder" class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-4">
-
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
-    <div class="text-sm text-pink-700 font-bold mb-1">Earl Grey</div>
-    <p class="text-xs text-gray-600 mb-2">Bergamot tea with vanilla.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Earl Grey', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Kid-Favourite</div>
-    <div class="text-sm text-pink-700 font-bold mb-1">Fuzzy Peach</div>
-    <p class="text-xs text-gray-600 mb-2">Juicy and tangy peach.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Fuzzy Peach', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
-    <div class="text-sm text-pink-700 font-bold mb-1">Pistachio</div>
-    <p class="text-xs text-gray-600 mb-2">Nutty & slightly sweet.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Pistachio', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
-    <div class="text-sm text-pink-700 font-bold mb-1">Crème Brûlée</div>
-    <p class="text-xs text-gray-600 mb-2">Custard with caramel crunch.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Crème Brûlée', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
-    <div class="text-sm text-pink-700 font-bold mb-1">Cookies & Cream</div>
-    <p class="text-xs text-gray-600 mb-2">Chocolate cookie filling.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cookies & Cream', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs px-2 py-1 rounded-bl">Top 5</div>
-    <div class="text-sm text-pink-700 font-bold mb-1">Red Velvet</div>
-    <p class="text-xs text-gray-600 mb-2">Cocoa & cream cheese.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Red Velvet', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Salted Caramel</div>
-    <p class="text-xs text-gray-600 mb-2">Sweet with sea salt.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Salted Caramel', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Strawberry</div>
-    <p class="text-xs text-gray-600 mb-2">Fresh berry flavour.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Strawberry', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Mango</div>
-    <p class="text-xs text-gray-600 mb-2">Juicy tropical.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Mango', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Vanilla</div>
-    <p class="text-xs text-gray-600 mb-2">Simple & elegant.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Vanilla', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Chocolate</div>
-    <p class="text-xs text-gray-600 mb-2">Rich cocoa goodness.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Chocolate', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Lemon</div>
-    <p class="text-xs text-gray-600 mb-2">Bright & citrusy.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Lemon', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Raspberry</div>
-    <p class="text-xs text-gray-600 mb-2">Sweet with a tart pop.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Raspberry', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Watermelon</div>
-    <p class="text-xs text-gray-600 mb-2">Fresh summer vibes.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Watermelon', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Guava</div>
-    <p class="text-xs text-gray-600 mb-2">Tropical and sweet.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Guava', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Cherry</div>
-    <p class="text-xs text-gray-600 mb-2">Bold & fruity.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cherry', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Cola</div>
-    <p class="text-xs text-gray-600 mb-2">Like a fizzy cola candy.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cola', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Banana</div>
-    <p class="text-xs text-gray-600 mb-2">Smooth and sweet.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Banana', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Apple</div>
-    <p class="text-xs text-gray-600 mb-2">Crisp green apple.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Apple', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Lavender</div>
-    <p class="text-xs text-gray-600 mb-2">Delicate floral sweetness.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Lavender', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Marshmallow</div>
-    <p class="text-xs text-gray-600 mb-2">Fluffy & playful.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Marshmallow', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Nutella</div>
-    <p class="text-xs text-gray-600 mb-2">Hazelnut chocolate spread.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Nutella', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Cashew Caramel</div>
-    <p class="text-xs text-gray-600 mb-2">Caramel with roasted cashew.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cashew Caramel', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Coconut</div>
-    <p class="text-xs text-gray-600 mb-2">Creamy & tropical.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Coconut', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Biscoff</div>
-    <p class="text-xs text-gray-600 mb-2">Spiced cookie butter.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Biscoff', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  
-  <div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
-    
-    <div class="text-sm text-pink-700 font-bold mb-1">Cinnamon</div>
-    <p class="text-xs text-gray-600 mb-2">Warm & spiced.</p>
-    <select class="border p-2 text-sm w-full" onchange="addToOrder('Cinnamon', this.value)">
-      <option value="">Add to Order</option>
-      <option value="12">12 - $24</option>
-      <option value="18">18 - $36</option>
-      <option value="24">24 - $48</option>
-      <option value="30">30 - $60</option>
-      <option value="40">40 - $80</option>
-    </select>
-  </div>
-  </section>
-
-  <section id="order-summary" class="mt-16 max-w-xl mx-auto bg-white border border-gray-300 border-dashed rounded-md p-6 shadow-sm font-mono text-sm">
-    <h2 class="text-xl font-bold mb-4 text-center tracking-widest">ORDER SUMMARY</h2>
-    <ul id="summary-list" class="mb-4 space-y-1 whitespace-pre-wrap"></ul>
-    <div class="flex justify-between font-semibold border-t border-dashed pt-3 mt-4">
-      <span>Total</span>
-      <span id="total-price">$0.00</span>
+<section class="text-center mb-10">
+<h1 class="text-4xl font-semibold mb-2">Build Your Order</h1>
+<p class="text-lg">Pick your favourite flavours and quantities below.</p>
+</section>
+<section class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-4" id="flavour-builder">
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="absolute top-0 left-0 w-full bg-pink-600 text-white text-xs text-center py-1 rounded-t">
+      Top 5
     </div>
-    <p id="min-order-warning" class="text-red-600 font-semibold text-center mt-4 hidden"></p>
-  </section>
-
-  <section class="mt-10 max-w-xl mx-auto">
-    <form action="https://formspree.io/f/xblgbezo" method="POST" class="space-y-4">
-      <input type="hidden" name="_redirect" value="https://simplymacarons.ca/thank-you.html" />
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
-      <textarea name="message" placeholder="Order Details..." id="order-message" required class="w-full p-3 border rounded h-32"></textarea>
-      <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition w-full">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Earl Grey</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Earl Grey" type="color" value="#cfcfcf"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Earl Grey" type="color" value="#f8f0e3"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Earl Grey', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="absolute top-0 left-0 w-full bg-pink-600 text-white text-xs text-center py-1 rounded-t">
+      Kid-Favourite
+    </div>
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Fuzzy Peach</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Fuzzy Peach" type="color" value="#ffb347"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Fuzzy Peach" type="color" value="#ffdab9"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Fuzzy Peach', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="absolute top-0 left-0 w-full bg-pink-600 text-white text-xs text-center py-1 rounded-t">
+      Top 5
+    </div>
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Pistachio</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Pistachio" type="color" value="#93c572"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Pistachio" type="color" value="#fffacd"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Pistachio', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="absolute top-0 left-0 w-full bg-pink-600 text-white text-xs text-center py-1 rounded-t">
+      Top 5
+    </div>
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Crème Brûlée</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Crème Brûlée" type="color" value="#f5deb3"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Crème Brûlée" type="color" value="#ffe4b5"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Crème Brûlée', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="absolute top-0 left-0 w-full bg-pink-600 text-white text-xs text-center py-1 rounded-t">
+      Top 5
+    </div>
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Cookies &amp; Cream</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Cookies &amp; Cream" type="color" value="#d3d3d3"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Cookies &amp; Cream" type="color" value="#f0f0f0"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Cookies &amp; Cream', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="absolute top-0 left-0 w-full bg-pink-600 text-white text-xs text-center py-1 rounded-t">
+      Top 5
+    </div>
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Red Velvet</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Red Velvet" type="color" value="#c7152f"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Red Velvet" type="color" value="#fff5f7"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Red Velvet', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Salted Caramel</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Salted Caramel" type="color" value="#d2b48c"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Salted Caramel" type="color" value="#f4e1c1"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Salted Caramel', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Strawberry</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Strawberry" type="color" value="#ff7eb9"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Strawberry" type="color" value="#ffe4e1"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Strawberry', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Mango</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Mango" type="color" value="#ffb84d"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Mango" type="color" value="#fff0aa"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Mango', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Vanilla</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Vanilla" type="color" value="#fff8dc"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Vanilla" type="color" value="#ffffff"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Vanilla', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Chocolate</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Chocolate" type="color" value="#7b3f00"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Chocolate" type="color" value="#d2b48c"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Chocolate', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Lemon</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Lemon" type="color" value="#fff44f"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Lemon" type="color" value="#fffacd"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Lemon', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Raspberry</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Raspberry" type="color" value="#e30b5c"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Raspberry" type="color" value="#ffcad4"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Raspberry', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Watermelon</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Watermelon" type="color" value="#fc6c85"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Watermelon" type="color" value="#a8e6cf"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Watermelon', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Guava</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Guava" type="color" value="#ff9999"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Guava" type="color" value="#ffcccb"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Guava', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Cherry</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Cherry" type="color" value="#de3163"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Cherry" type="color" value="#ffe4e1"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Cherry', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Cola</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Cola" type="color" value="#8b4513"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Cola" type="color" value="#deb887"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Cola', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Banana</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Banana" type="color" value="#ffe135"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Banana" type="color" value="#ffffe0"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Banana', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Apple</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Apple" type="color" value="#98fb98"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Apple" type="color" value="#d0f0c0"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Apple', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Lavender</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Lavender" type="color" value="#b497bd"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Lavender" type="color" value="#e6e6fa"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Lavender', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Marshmallow</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Marshmallow" type="color" value="#ffffff"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Marshmallow" type="color" value="#ffebcd"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Marshmallow', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Nutella</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Nutella" type="color" value="#6f4e37"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Nutella" type="color" value="#d2b48c"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Nutella', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Cashew Caramel</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Cashew Caramel" type="color" value="#deb887"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Cashew Caramel" type="color" value="#f4a460"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Cashew Caramel', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Coconut</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Coconut" type="color" value="#fffafa"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Coconut" type="color" value="#fffff0"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Coconut', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Biscoff</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Biscoff" type="color" value="#cd853f"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Biscoff" type="color" value="#f5deb3"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Biscoff', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+<div class="bg-white border rounded p-3 shadow-sm text-left relative transition-transform duration-200 hover:scale-105 hover:shadow-md">
+<div class="mt-6 text-sm text-pink-700 font-bold mb-1">Cinnamon</div>
+<p class="text-xs text-gray-600 mb-2"></p>
+<label class="text-xs block mb-1">Shell Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-shell-for="Cinnamon" type="color" value="#a0522d"/>
+<label class="text-xs block mb-1">Filling Colour</label>
+<input class="mb-2 w-full h-8 rounded border" data-filling-for="Cinnamon" type="color" value="#deb887"/>
+<select class="border p-2 text-sm w-full" onchange="addToOrder('Cinnamon', this.value)">
+<option value="">-Select Quantity-</option>
+<option value="12">12 - $24</option>
+<option value="18">18 - $36</option>
+<option value="24">24 - $48</option>
+<option value="30">30 - $60</option>
+<option value="40">40 - $80</option>
+</select>
+</div>
+</section>
+<section class="mt-16 max-w-xl mx-auto bg-white border border-gray-300 border-dashed rounded-md p-6 shadow-sm font-mono text-sm" id="order-summary">
+<h2 class="text-xl font-bold mb-4 text-center tracking-widest">ORDER SUMMARY</h2>
+<ul class="mb-4 space-y-1 whitespace-pre-wrap" id="summary-list"></ul>
+<div class="flex justify-between font-semibold border-t border-dashed pt-3 mt-4">
+<span>Total</span>
+<span id="total-price">$0.00</span>
+</div>
+<p class="text-red-600 font-semibold text-center mt-4 hidden" id="min-order-warning"></p>
+</section>
+<section class="mt-10 max-w-xl mx-auto">
+<form action="https://hooks.zapier.com/hooks/catch/22668412/2p270zr/" class="space-y-4" method="POST">
+<input name="_redirect" type="hidden" value="https://simplymacarons.ca/thank-you.html"/>
+<input class="w-full p-3 border rounded" name="name" placeholder="Your Name" required="" type="text"/>
+<input class="w-full p-3 border rounded" name="email" placeholder="Your Email" required="" type="email"/>
+<input class="w-full p-3 border rounded" name="phone" placeholder="Mobile Number (optional)" type="tel"/>
+<textarea class="w-full p-3 border rounded h-32" id="order-message" name="message" placeholder="Order Details..." required=""></textarea>
+<button class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition w-full" type="submit">
         Send Order Request
       </button>
-      <p class="text-sm text-gray-600 text-center mt-4">
+<p class="text-sm text-gray-600 text-center mt-4">
         Payment accepted via E-Transfer, Cash, or Credit Card (Square).
-        <br>
+        <br/>
         No payment is required until you pick up your order.
       </p>
-      
-    </form>
-  </section>
-
-  <footer class="mt-16 py-8 text-center text-sm text-gray-600">
+<input id="summary-image-data" name="summary_image" type="hidden"/></form>
+</section>
+<footer class="mt-16 py-8 text-center text-sm text-gray-600">
     Made with love in Canada 🇨🇦
   </footer>
-
-
 <!-- Sticky Order Summary Bar -->
 <div class="fixed bottom-0 left-0 right-0 bg-pink-600 text-white flex justify-between items-center px-6 py-3 shadow-lg z-50">
-  <div class="text-sm font-medium">
+<div class="text-sm font-medium">
     Macarons Selected: <span id="order-count">0</span>
-  </div>
-  <button onclick="scrollToForm()" class="flex items-center gap-2 bg-white text-pink-600 font-semibold text-sm px-4 py-2 rounded-full shadow hover:bg-pink-100 transition">
-    🛒 Total: $<span id="order-total">0.00</span>
-  </button>
 </div>
-
+<button class="flex items-center gap-2 bg-white text-pink-600 font-semibold text-sm px-4 py-2 rounded-full shadow hover:bg-pink-100 transition" onclick="scrollToForm()">
+    🛒 Total: $<span id="order-total">0.00</span>
+</button>
+</div>
 <script>
 function scrollToForm() {
   const formSection = document.querySelector('form');
@@ -496,89 +552,141 @@ function scrollToForm() {
   }
 }
 </script>
-
-  
 </main>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-  
-    const summaryList = document.getElementById('summary-list');
-    const totalPriceSpan = document.getElementById('total-price');
-    const orderMessage = document.getElementById('order-message');
-    const warning = document.getElementById('min-order-warning');
-    const submitBtn = document.querySelector('form button[type="submit"]');
-    const orderCount = document.getElementById('order-count');
-    const orderTotal = document.getElementById('order-total');
-  
-    let order = [];
-  
-    window.addToOrder = function(name, qty) {
-      if (!qty) return;
-      const existing = order.find(item => item.name === name);
-      if (existing) {
-        existing.qty = parseInt(qty);
-      } else {
-        order.push({ name, qty: parseInt(qty) });
-      }
-      updateSummary();
-    };
-  
-    function updateSummary() {
-      summaryList.innerHTML = '';
-      let total = 0;
-  
-      order.forEach(item => {
-        const itemTotal = item.qty * 2;
-        total += itemTotal;
-        const line = document.createElement('li');
-        const flavourText = `${item.qty} x ${item.name}`;
-        const lineFormatted = flavourText.padEnd(25, '.') + `$${itemTotal.toFixed(2)}`;
-        line.textContent = lineFormatted;
-        summaryList.appendChild(line);
-      });
-  
-      const totalQty = order.reduce((sum, item) => sum + item.qty, 0);
-      const invalid = order.find(item => item.qty < 12);
-      if (totalQty >= 50) {
-        total = totalQty * 1.8;
-      }
-  
-      totalPriceSpan.textContent = `$${total.toFixed(2)}`;
-      orderMessage.value = order.map(item => `${item.qty} x ${item.name}`).join(', ') + ` | Total: $${total.toFixed(2)}`;
-  
-      if (orderCount) orderCount.textContent = totalQty;
-      if (orderTotal) orderTotal.textContent = total.toFixed(2);
-  
-      if (invalid) {
-        warning.textContent = `Each flavour must have at least 12 macarons.`;
-        warning.classList.remove('hidden');
-        submitBtn.disabled = true;
-        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
-      } else {
-        warning.classList.add('hidden');
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-      }
-    }
-  
-    // Checkout scroll button
-    window.scrollToForm = function() {
-      const formSection = document.querySelector('form');
-      if (formSection) {
-        formSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    };
-  });
-  </script>
-  
+document.addEventListener('DOMContentLoaded', function () {
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
 
-</body>
+  const summaryList = document.getElementById('summary-list');
+  const totalPriceSpan = document.getElementById('total-price');
+  const orderMessage = document.getElementById('order-message');
+  const warning = document.getElementById('min-order-warning');
+  const submitBtn = document.querySelector('form button[type="submit"]');
+  const orderCount = document.getElementById('order-count');
+  const orderTotal = document.getElementById('order-total');
+  const nameInput = document.querySelector('input[name="name"]');
+  const emailInput = document.querySelector('input[name="email"]');
+  const phoneInput = document.querySelector('input[name="phone"]');
+  const hiddenImage = document.getElementById('summary-image-data');
+  const form = document.querySelector('form');
+
+  const colorNames = {"#cfcfcf": "Gray", "#f8f0e3": "Cream", "#ffb347": "Peach", "#ffdab9": "Light Peach", "#93c572": "Green", "#fffacd": "Pale Yellow", "#f5deb3": "Caramel", "#ffe4b5": "Light Caramel", "#d3d3d3": "Light Gray", "#f0f0f0": "Off-White", "#c7152f": "Red Velvet", "#fff5f7": "Pale Pink", "#d2b48c": "Tan", "#ff7eb9": "Strawberry", "#ffe4e1": "Light Rose", "#ffb84d": "Mango", "#fff8dc": "Vanilla", "#7b3f00": "Cocoa", "#fff44f": "Yellow", "#e30b5c": "Raspberry", "#fc6c85": "Watermelon", "#a8e6cf": "Mint", "#ff9999": "Guava", "#de3163": "Cherry", "#8b4513": "Brown", "#ffe135": "Banana", "#98fb98": "Light Green", "#b497bd": "Lavender", "#ffffff": "White", "#6f4e37": "Hazelnut", "#deb887": "Cashew", "#fffafa": "Snow", "#cd853f": "Biscoff", "#a0522d": "Cinnamon"};
+
+  let order = [];
+
+  if (nameInput) nameInput.addEventListener('input', updateSummary);
+  if (emailInput) emailInput.addEventListener('input', updateSummary);
+  if (phoneInput) phoneInput.addEventListener('input', updateSummary);
+
+  function getColorName(hex) {
+    if (!hex) return '';
+    return colorNames[hex.toLowerCase()] || hex;
+  }
+
+  window.addToOrder = function(name, qty) {
+    if (!qty) return;
+    const existing = order.find(item => item.name === name);
+    const shellColor = document.querySelector(`[data-shell-for="${name}"]`)?.value || '';
+    const fillingColor = document.querySelector(`[data-filling-for="${name}"]`)?.value || '';
+
+    if (existing) {
+      existing.qty = parseInt(qty);
+      existing.shell = shellColor;
+      existing.filling = fillingColor;
+    } else {
+      order.push({
+        name,
+        qty: parseInt(qty),
+        shell: shellColor,
+        filling: fillingColor
+      });
+    }
+    updateSummary();
+  };
+
+  function updateSummary() {
+    summaryList.innerHTML = '';
+
+    if (nameInput || emailInput || phoneInput) {
+      const contactInfo = document.createElement('li');
+      contactInfo.classList.add('text-left', 'mb-4', 'text-sm');
+      contactInfo.innerHTML = `
+        <strong>Customer Info:</strong><br>
+        ${nameInput?.value ? `Name: ${nameInput.value}<br>` : ''}
+        ${emailInput?.value ? `Email: ${emailInput.value}<br>` : ''}
+        ${phoneInput?.value ? `Phone: ${phoneInput.value}<br>` : ''}
+      `;
+      summaryList.appendChild(contactInfo);
+    }
+
+    let total = 0;
+    const textLines = [];
+    order.forEach(item => {
+      const itemTotal = item.qty * 2;
+      total += itemTotal;
+
+      const shell = getColorName(item.shell);
+      const filling = getColorName(item.filling);
+
+      const lineText = `${item.qty} x ${item.name} (${shell} shell, ${filling} filling)`;
+      textLines.push(lineText);
+
+      const flavourLine = document.createElement('li');
+      flavourLine.textContent = lineText.padEnd(45, '.') + `$${itemTotal.toFixed(2)}`;
+      summaryList.appendChild(flavourLine);
+    });
+
+    const totalQty = order.reduce((sum, item) => sum + item.qty, 0);
+    const invalid = order.find(item => item.qty < 12);
+    if (totalQty >= 50) {
+      total = totalQty * 1.8;
+    }
+
+    const contactLine = `Name: ${nameInput?.value || ''}\nEmail: ${emailInput?.value || ''}${phoneInput?.value ? `\nPhone: ${phoneInput.value}` : ''}`;
+    totalPriceSpan.textContent = `$${total.toFixed(2)}`;
+    orderMessage.value = `${contactLine}\n\n${textLines.join('\n')}\n\nTotal: $${total.toFixed(2)}`;
+
+    if (orderCount) orderCount.textContent = totalQty;
+    if (orderTotal) orderTotal.textContent = total.toFixed(2);
+
+    if (invalid) {
+      warning.textContent = `Each flavour must have at least 12 macarons.`;
+      warning.classList.remove('hidden');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+    } else {
+      warning.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+    }
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    if (window.html2canvas && document.getElementById("order-summary")) {
+      await html2canvas(document.getElementById("order-summary")).then(canvas => {
+        hiddenImage.value = canvas.toDataURL("image/png");
+      });
+    }
+
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    }).then(() => {
+      window.location.href = "thank-you.html";
+    }).catch(err => {
+      alert("Oops! Something went wrong. Please try again.");
+      console.error(err);
+    });
+  });
+});
+</script></body>
 </html>
